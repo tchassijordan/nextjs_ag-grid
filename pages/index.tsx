@@ -40,18 +40,23 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full h-full flex">
-      <Sidebar>
-      </Sidebar>
-      <div className="ag-theme-alpine-dark w-4/5 h-screen" >
-        <AgGridReact
-          rowData={data}
-          columnDefs={columnDefs}
-          defaultColDef={defaultColDef}
-          autoGroupColumnDef={autoGroupColumnDef}
-          animateRows={true}
-          rowGroupPanelShow={"always"}
-        ></AgGridReact>
+    <div>
+      <Head>
+        <title>Ag grid with next js</title>
+        <meta name="description" content="Ag grid created with next js" />
+      </Head>
+      <div className="w-full h-full flex">
+        <Sidebar></Sidebar>
+        <div className="ag-theme-alpine-dark w-4/5 h-screen">
+          <AgGridReact
+            rowData={data}
+            columnDefs={columnDefs}
+            defaultColDef={defaultColDef}
+            autoGroupColumnDef={autoGroupColumnDef}
+            animateRows={true}
+            rowGroupPanelShow={"always"}
+          ></AgGridReact>
+        </div>
       </div>
     </div>
   );

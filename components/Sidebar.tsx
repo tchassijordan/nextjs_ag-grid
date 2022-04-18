@@ -1,4 +1,4 @@
-const Sidebar = ({ children }) => {
+const Sidebar = () => {
   return (
     <div className="w-1/5 bg-stone-900 text-white border-r-2">
       <ul className="list-none flex flex-col items-center gap-3 pt-5">
