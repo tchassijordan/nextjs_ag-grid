@@ -8,6 +8,7 @@ import "ag-grid-community/dist/styles/ag-theme-alpine-dark.css";
 import Sidebar from "../components/Sidebar";
 
 export default function Home() {
+  //define the column header for our table in a local state
   const [columnDefs, setColumnDefs] = useState([
     { field: "country", rowGroup: true, enableRowGroup: true, hide: true },
     { field: "sectors", rowGroup: true, enableRowGroup: true, hide: true },
@@ -24,6 +25,7 @@ export default function Home() {
     },
   ]);
 
+  //define the properties of our tables columns 
   const defaultColDef = useMemo(() => {
     return {
       flex: 1,
@@ -33,6 +35,7 @@ export default function Home() {
     };
   }, []);
 
+  //define the minimum width for a column group
   const autoGroupColumnDef = useMemo(() => {
     return {
       minWidth: 200,
