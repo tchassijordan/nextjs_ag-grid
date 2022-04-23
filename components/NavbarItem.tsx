@@ -15,7 +15,7 @@ export default function NavbarItem({
   return (
     <Link href={to}>
       <a
-        className={`${cls} px-5 py-3 hover:bg-[#2196F31A] hover:opacity-100 transition capitalize text-sm tracking-wide`}
+        className={`${cls} px-5 py-3 hover:bg-[#2196F31A] hover:opacity-100 transition capitalize text-sm tracking-wide flex items-baseline`}
       >
         {children}
       </a>
