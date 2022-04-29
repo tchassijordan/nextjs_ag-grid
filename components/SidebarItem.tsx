@@ -2,20 +2,20 @@ import Link from "next/link";
 import { ReactElement, ReactNode } from "react";
 
 type Params = {
-  children?: ReactNode;
+  children?: ReactElement;
   to: string;
   cls?: string;
 };
 
-export default function NavbarItem({
+export default function SidebarItem({
   to,
   children,
-  cls,
+  cls
 }: Params): ReactElement {
   return (
     <Link href={to}>
       <a
-        className={`${cls} px-5 py-3 hover:bg-[#2196F31A] hover:opacity-100 transition capitalize text-sm tracking-wide flex items-baseline`}
+        className={`${cls} px-5 py-3 hover:bg-secondary hover:opacity-100 transition capitalize text-sm tracking-wide flex items-baseline`}
       >
         {children}
       </a>
